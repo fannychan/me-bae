@@ -1,0 +1,22 @@
+{
+  "name": "me-bae",
+  "version": "1.0.0",
+  "description": "Backend for my online cv",
+  "main": "index.js",
+  "dependencies": {
+    "@aws-sdk/client-ssm": "^3.3.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:aws": "aws cloudformation deploy --template-file ./aws/config.yml  --parameter-overrides BucketName=me-bae-bucket --stack-name me-bae-lambda-nodejs --capabilities CAPABILITY_IAM"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fannychan/me-bae.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/fannychan/me-bae#readme"
+}
